@@ -1,0 +1,87 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Feedback Forms</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/feedback_util.css">
+    <link rel="stylesheet" type="text/css" href="css/feedback_main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="backend_feedback.php" method="POST">
+				<span class="contact100-form-title">
+					We want<br>to<br>Hear your Thoughts 
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-23" data-validate = "Email ID is required">
+						<span class="label-input100">Email ID</span>
+						<input class="input100" type="email" name="feedback_emailID" value="<?php echo $_SESSION["email"];?>" placeholder="Type your Email ID">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <span class="label-input100 dropdown">Rate us</span>
+                        <group class="inline-radio">
+                            <div class="div_radioButton"><input style="margin-right: 10px" type="radio" name="feedback_Rating" checked><label>Good</label></div>
+                            <div class="div_radioButton"><input style="margin-right: 10px" type="radio" name="feedback_Rating"><label>Average</label></div>
+                            <div class="div_radioButton"><input style="margin-right: 10px" type="radio" name="feedback_Rating"><label>Bad</label></div>
+                        </group>
+					</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="feedback_message" placeholder="Your message here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button name= "submit_feedback" type="submit"
+						 class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	
+    <script src="js/main.js"></script>
+        
+    
+
+
+</body>
+</html>
