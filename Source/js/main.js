@@ -1,7 +1,3 @@
-var myParam = location.search.split('myParam=')[1];
-document.getElementById("id_feedback_email").value=myParam;
-
-
 
 (function ($) {
     "use strict";
